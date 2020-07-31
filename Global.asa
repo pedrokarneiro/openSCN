@@ -1,0 +1,20 @@
+<script language=vbscript runat=server>
+SUB Application_OnStart
+	'
+END SUB
+
+SUB Application_OnEnd
+	'
+END SUB
+
+SUB Session_OnStart
+	Session("ConnString") = "Provider=SQLOLEDB.1;Persist Security Info=False;User ID=UsuarioDoSGBD;Password=senha;Initial Catalog=NomeDoBancoDeDados;Data Source=NomeDoDataSource"
+	Session("Teste") = false
+	Session.Timeout = 180
+END SUB
+
+SUB Session_OnEnd
+'	Application("Usuarios") = Replace(Application("Usuarios"),Session("Usuario"),"")
+'	Application("Usuarios") = Replace(Application("Usuarios"),";;",";")
+END SUB
+</script>
